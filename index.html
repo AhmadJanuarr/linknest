@@ -1,119 +1,135 @@
-  <!DOCTYPE html>
-  <html>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-      <link rel="icon" type="image/x-icon" href="/assets/img/my-logo.ico"/>
-      <title>Madlink – All My Links</title>
-      <style>
-        @import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Madlink adalah halaman linktree pribadi Ahmad Januar A, seorang frontend developer dan freelancer. Temukan semua link pentingnya di sini."
+    />
+    //open graph
+    <meta property="og:title" content="Madlink" />
+    <meta
+      property="og:description"
+      content="Temukan semua link penting milik Ahmad Januar A: portfolio, GitHub, LinkedIn, dan lainnya."
+    />
+    <meta property="og:image" content="/assets/img/preview.png" />
+    <meta property="og:url" content="https://ahmadjanuar.web.id/" />
+    <meta property="og:type" content="website" />
 
-        @layer base {
-          body {
-            font-family: "Jersey 15", sans-serif;
-            color: #fff;
-          }
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="icon" type="image/x-icon" href="/assets/img/my-logo.ico" />
+    <title>Madlink – All My Links</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
+
+      @layer base {
+        body {
+          font-family: "Jersey 15", sans-serif;
+          color: #fff;
         }
+      }
 
-        @layer components {
-          .btn-pixel {
-            box-shadow: 4px 4px 0 0 #000000;
-            transition: all 0.1s; /
-          }
-          .btn-pixel:active {
-            transform: translate(4px, 4px);
-            box-shadow: none;
-          }
+      @layer components {
+        .btn-pixel {
+          box-shadow: 4px 4px 0 0 #000000;
+          transition: all 0.1s; /
         }
-      </style>
-      <script>
-        tailwind.config = {
-          theme: {
-            extend: {},
-          },
-        };
-      </script>
-    </head>
-    <body
-      class="flex flex-col items-center justify-center min-h-screen px-4 bg-[url('/assets/gif/pc1954-phone.gif')] lg:bg-[url('/assets/gif/pc1954.gif')]
-      bg-cover px-5">
-      <!-- Header: Profile Info -->
-      <header class="text-center mb-6">
-        <img
-          src="/assets/gif/my_logo.gif"
-          alt="Ahmad Januar Avatar"
-          class="w-24 h-24 rounded-full border-2 border-white shadow-lg mx-auto mb-3"
-        />
-        <h1 class="text-2xl font-bold">Ahmad Januar A</h1>
-        <p class="text-gray-400 text-md lg:text-lg">Frontend Dev | Freelancer | Creator</p>
-      </header>
+        .btn-pixel:active {
+          transform: translate(4px, 4px);
+          box-shadow: none;
+        }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="flex flex-col items-center justify-center min-h-screen px-4 bg-[url('/assets/gif/pc1954-phone.gif')] lg:bg-[url('/assets/gif/pc1954.gif')] bg-cover px-5"
+  >
+    <!-- Header: Profile Info -->
+    <header class="text-center mb-6">
+      <img
+        src="/assets/gif/my_logo.gif"
+        alt="Ahmad Januar Avatar"
+        class="w-24 h-24 rounded-full border-2 border-white shadow-lg mx-auto mb-3"
+      />
+      <h1 class="text-2xl font-bold">Ahmad Januar A</h1>
+      <p class="text-gray-400 text-md lg:text-lg">Frontend Dev | Freelancer | Creator</p>
+    </header>
 
-      <!-- Main: Links Section -->
-      <main class="w-full max-w-sm" role="main">
-        <ul aria-label="Social links" class="space-y-3">
-          <li>
-            <a href="https://portofolio.ahmadjanuar.web.id/" target="_blank">
-              <button
-                class="w-full bg-[#252836] text-white px-4 py-3 rounded-xl transition-all duration-400 btn-pixel text-xl grid grid-cols-[40px_1fr_auto] items-center gap-4 hover:bg-[#23242C]"
-              >
-                <img src="assets/svg/globe-white.svg" alt="Portfolio" class="w-6 h-6 mx-auto" />
-                <span class="text-left">My website</span>
-                <span class="text-gray-400 text-sm">ฅ^._.^ฅ</span>
-              </button>
-            </a>
-          </li>
+    <!-- Main: Links Section -->
+    <main class="w-full max-w-sm" role="main">
+      <ul aria-label="Social links" class="space-y-3">
+        <li>
+          <a href="https://portofolio.ahmadjanuar.web.id/" target="_blank">
+            <button
+              class="w-full bg-[#252836] text-white px-4 py-3 rounded-xl transition-all duration-400 btn-pixel text-xl grid grid-cols-[40px_1fr_auto] items-center gap-4 hover:bg-[#23242C]"
+            >
+              <img src="assets/svg/globe-white.svg" alt="Portfolio" class="w-6 h-6 mx-auto" />
+              <span class="text-left">My website</span>
+              <span class="text-gray-400 text-sm">ฅ^._.^ฅ</span>
+            </button>
+          </a>
+        </li>
 
-          <li>
-            <a href="https://github.com/AhmadJanuarr" target="_blank">
-              <button
-                class="w-full bg-[#252836] text-white px-4 py-3 rounded-xl transition-all duration-400 btn-pixel text-xl grid grid-cols-[40px_1fr_auto] items-center gap-4 hover:bg-[#23242C]"
-              >
-                <img src="assets/svg/github-white.svg" alt="GitHub" class="w-6 h-6 mx-auto" />
-                <span class="text-left">GitHub</span>
-                <span class="text-gray-400 text-sm">⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆</span>
-              </button>
-            </a>
-          </li>
+        <li>
+          <a href="https://github.com/AhmadJanuarr" target="_blank">
+            <button
+              class="w-full bg-[#252836] text-white px-4 py-3 rounded-xl transition-all duration-400 btn-pixel text-xl grid grid-cols-[40px_1fr_auto] items-center gap-4 hover:bg-[#23242C]"
+            >
+              <img src="assets/svg/github-white.svg" alt="GitHub" class="w-6 h-6 mx-auto" />
+              <span class="text-left">GitHub</span>
+              <span class="text-gray-400 text-sm">⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆</span>
+            </button>
+          </a>
+        </li>
 
-          <li>
-            <a href="https://www.instagram.com/madds.dev/" target="_blank">
-              <button
-                class="w-full bg-[#252836] text-white px-4 py-3 rounded-xl transition-all duration-400 btn-pixel text-xl grid grid-cols-[40px_1fr_auto] items-center gap-4 hover:bg-[#23242C]"
-              >
-                <img src="assets/svg/instagram-white.svg" alt="Instagram" class="w-6 h-6 mx-auto" />
-                <span class="text-left">Instagram</span>
-                <span class="text-gray-400 text-sm">જ⁀➴</span>
-              </button>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/ahmad-januar-a96515221/" target="_blank">
-              <button
-                class="w-full bg-[#252836] text-white px-4 py-3 rounded-xl transition-all duration-400 btn-pixel text-xl grid grid-cols-[40px_1fr_auto] items-center gap-4 hover:bg-[#23242C]"
-              >
-                <img src="assets/svg/linkedin-white.svg" alt="Email" class="w-6 h-6 mx-auto" />
-                <span class="text-left">Linkedin</span>
-                <span class="text-gray-400 text-sm">┆ ⤿ 💌 ⌗</span>
-              </button>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/ahmad-januar-a96515221/" target="_blank">
-              <button
-                class="w-full bg-[#252836] text-white px-4 py-3 rounded-xl transition-all duration-400 btn-pixel text-xl grid grid-cols-[40px_1fr_auto] items-center gap-4 hover:bg-[#23242C]"
-              >
-                <img src="assets/svg/tiktok-white.svg" alt="Email" class="w-6 h-6 mx-auto" />
-                <span class="text-left">Tiktok</span>
-                <span class="text-gray-400 text-sm">⋆⭒˚.⋆🪐 ⋆⭒˚.⋆</span>
-              </button>
-            </a>
-          </li>
-        </ul>
-      </main>
+        <li>
+          <a href="https://www.instagram.com/madds.dev/" target="_blank">
+            <button
+              class="w-full bg-[#252836] text-white px-4 py-3 rounded-xl transition-all duration-400 btn-pixel text-xl grid grid-cols-[40px_1fr_auto] items-center gap-4 hover:bg-[#23242C]"
+            >
+              <img src="assets/svg/instagram-white.svg" alt="Instagram" class="w-6 h-6 mx-auto" />
+              <span class="text-left">Instagram</span>
+              <span class="text-gray-400 text-sm">જ⁀➴</span>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/ahmad-januar-a96515221/" target="_blank">
+            <button
+              class="w-full bg-[#252836] text-white px-4 py-3 rounded-xl transition-all duration-400 btn-pixel text-xl grid grid-cols-[40px_1fr_auto] items-center gap-4 hover:bg-[#23242C]"
+            >
+              <img src="assets/svg/linkedin-white.svg" alt="Email" class="w-6 h-6 mx-auto" />
+              <span class="text-left">Linkedin</span>
+              <span class="text-gray-400 text-sm">┆ ⤿ 💌 ⌗</span>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/ahmad-januar-a96515221/" target="_blank">
+            <button
+              class="w-full bg-[#252836] text-white px-4 py-3 rounded-xl transition-all duration-400 btn-pixel text-xl grid grid-cols-[40px_1fr_auto] items-center gap-4 hover:bg-[#23242C]"
+            >
+              <img src="assets/svg/tiktok-white.svg" alt="Email" class="w-6 h-6 mx-auto" />
+              <span class="text-left">Tiktok</span>
+              <span class="text-gray-400 text-sm">⋆⭒˚.⋆🪐 ⋆⭒˚.⋆</span>
+            </button>
+          </a>
+        </li>
+      </ul>
+    </main>
 
-      <!-- Footer -->
-      <footer class="mt-10 text-md lg:text-lg text-slate-100 text-center">
-        <p>© 2025 Ahmad Januar A. Powered by <strong class="underline">MadLink☕︎</strong>.</p>
-      </footer>
-    </body>
-  </html>
+    <!-- Footer -->
+    <footer class="mt-10 text-md lg:text-lg text-slate-100 text-center">
+      <p>© 2025 Ahmad Januar A. Powered by <strong class="underline">MadLink☕︎</strong>.</p>
+    </footer>
+  </body>
+</html>
