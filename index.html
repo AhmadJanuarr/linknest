@@ -24,7 +24,7 @@
     />
     <meta name="twitter:image" content="https://ahmadjanuar.web.id/assets/img/preview.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-    <link rel="icon" type="image/x-icon" href="/assets/img/my-logo.ico" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/new-logo.png" />
     <title>Madlink – All My Links</title>
 
     <style>
@@ -39,12 +39,41 @@
 
       @layer components {
         .btn-pixel {
-          box-shadow: 4px 4px 0 0 #000000;
-          transition: all 0.1s; /
+          box-shadow: 6px 6px 0 0 #000000;
+          transition: all 0.1s;
         }
         .btn-pixel:active {
           transform: translate(4px, 4px);
           box-shadow: none;
+        }
+        .btn-pixel:hover {
+          transform: translate(4px, 4px);
+          box-shadow: none;
+        }
+
+        .loading-bg {
+          background: gray;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .bg-loaded {
+          background: url("/assets/gif/bg-mobile.gif") center/cover no-repeat;
+        }
+
+        @media (min-width: 1024px) {
+          .bg-loaded {
+            background: url("/assets/gif/bg.gif") center/cover no-repeat;
+          }
+        }
+
+        @keyframes pulse {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.7;
+          }
         }
       }
     </style>
@@ -56,9 +85,7 @@
       };
     </script>
   </head>
-  <body
-    class="flex flex-col items-center justify-center min-h-screen px-4 bg-[url('/assets/gif/pc1954-phone.gif')] lg:bg-[url('/assets/gif/pc1954.gif')] bg-cover px-5"
-  >
+  <body class="flex flex-col items-center justify-center min-h-screen px-4 loading-bg bg-cover px-5" id="body">
     <!-- Header: Profile Info -->
     <header class="text-center mb-6">
       <img
@@ -66,8 +93,8 @@
         alt="Ahmad Januar Avatar"
         class="w-24 h-24 rounded-full border-2 border-white shadow-lg mx-auto mb-3"
       />
-      <h1 class="text-2xl font-bold">Ahmad Januar A</h1>
-      <p class="text-gray-400 text-md lg:text-lg">Frontend Dev | Freelancer | Creator</p>
+      <h1 class="text-3xl font-bold text-white">Ahmad Januar A</h1>
+      <p class="text-gray-900 text-md lg:text-xl">Frontend Dev | Freelancer | Creator</p>
     </header>
 
     <!-- Main: Links Section -->
@@ -134,8 +161,35 @@
     </main>
 
     <!-- Footer -->
-    <footer class="mt-10 text-md lg:text-lg text-slate-100 text-center">
+    <footer class="mt-10 text-lg text-slate-100 text-center">
       <p>© 2025 Ahmad Januar A. Powered by <strong class="underline">MadLink☕︎</strong>.</p>
     </footer>
+
+    <script>
+      // Preload background images
+      const mobileBg = new Image();
+      const desktopBg = new Image();
+
+      mobileBg.src = "/assets/gif/bg-mobile.gif";
+      desktopBg.src = "/assets/gif/bg.gif";
+
+      // Function to check if images are loaded
+      function checkImagesLoaded() {
+        if (mobileBg.complete && desktopBg.complete) {
+          const body = document.getElementById("body");
+          body.classList.remove("loading-bg");
+          body.classList.add("bg-loaded");
+        } else {
+          // If not loaded yet, check again in 100ms
+          setTimeout(checkImagesLoaded, 100);
+        }
+      }
+
+      // Start checking when page loads
+      window.addEventListener("load", checkImagesLoaded);
+
+      // Also check immediately in case images are already cached
+      checkImagesLoaded();
+    </script>
   </body>
 </html>
